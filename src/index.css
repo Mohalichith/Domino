@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+/* Custom scrollbars for hands and modal panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Realistic Table Background Textures */
+.table-felt-pattern {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.45) 85%),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 8px 8px;
+}
+
+.table-wood-grain {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.6) 90%),
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 6px);
+}
+
+.table-rim-wood {
+  box-shadow: 
+    inset 0 0 0 10px #221208,
+    inset 0 0 0 12px #3c1e0e,
+    inset 0 0 0 14px rgba(255, 215, 0, 0.25),
+    inset 0 0 35px rgba(0, 0, 0, 0.85),
+    0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* 3D Realistic Domino Tile Materials */
+.tile-ivory-material {
+  background: linear-gradient(145deg, #ffffff 0%, #faf6ec 30%, #f4ecdc 70%, #eae0ca 100%);
+  box-shadow:
+    0 8px 18px -2px rgba(0, 0, 0, 0.45),
+    0 3px 6px -1px rgba(0, 0, 0, 0.3),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 2px 0 rgba(160, 140, 110, 0.4),
+    inset 1.5px 0 1.5px 0 rgba(255, 255, 255, 0.6),
+    inset -1.5px 0 1.5px 0 rgba(160, 140, 110, 0.4);
+  border-color: #d8cdb8;
+}
+
+.tile-black-material {
+  background: linear-gradient(145deg, #32353e 0%, #1e2026 35%, #14151a 70%, #0c0d10 100%);
+  box-shadow:
+    0 8px 20px -2px rgba(0, 0, 0, 0.6),
+    0 3px 6px -1px rgba(0, 0, 0, 0.4),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.8),
+    inset 1.5px 0 1.5px 0 rgba(255, 255, 255, 0.2),
+    inset -1.5px 0 1.5px 0 rgba(0, 0, 0, 0.6);
+  border-color: #4b4e5c;
+}
+
+.tile-marble-material {
+  background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 30%, #e2e8f0 70%, #cbd5e1 100%);
+  box-shadow:
+    0 8px 18px -2px rgba(0, 0, 0, 0.4),
+    0 3px 6px -1px rgba(0, 0, 0, 0.25),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 2px 0 rgba(148, 163, 184, 0.4),
+    inset 1.5px 0 1.5px 0 rgba(255, 255, 255, 0.7),
+    inset -1.5px 0 1.5px 0 rgba(148, 163, 184, 0.4);
+  border-color: #94a3b8;
+}
+
+/* Engraved recessed pips */
+.pip-recessed-dark {
+  background: radial-gradient(circle at 40% 40%, #292524 0%, #1c1917 60%, #0c0a09 100%);
+  box-shadow: 
+    inset 0 1.5px 2px rgba(0, 0, 0, 0.85),
+    inset 0 -0.5px 1px rgba(0, 0, 0, 0.6),
+    0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.pip-recessed-gold {
+  background: radial-gradient(circle at 35% 35%, #fef08a 0%, #eab308 55%, #a16207 100%);
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 4px rgba(234, 179, 8, 0.5),
+    0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.pip-recessed-marble {
+  background: radial-gradient(circle at 40% 40%, #1e293b 0%, #0f172a 60%, #020617 100%);
+  box-shadow: 
+    inset 0 1.5px 2px rgba(0, 0, 0, 0.9),
+    0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Center Metallic Brass Spinner Rivet */
+.tile-spinner-rivet {
+  background: radial-gradient(circle at 35% 35%, #fef08a 0%, #f59e0b 50%, #b45309 85%, #78350f 100%);
+  box-shadow: 
+    0 1.5px 3px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* Center Tile Groove */
+.tile-groove-line {
+  background: linear-gradient(to bottom, rgba(120, 113, 108, 0.6), rgba(68, 64, 60, 0.8));
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.tile-groove-line-dark {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(40, 42, 50, 0.5));
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* Pulse animation for valid moves */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px 2px rgba(16, 185, 129, 0.7), inset 0 0 4px rgba(16, 185, 129, 0.5);
+    border-color: #34d399;
+  }
+  50% {
+    box-shadow: 0 0 24px 6px rgba(16, 185, 129, 0.95), inset 0 0 8px rgba(16, 185, 129, 0.7);
+    border-color: #10b981;
+  }
+}
+
+.playable-pulse {
+  animation: pulseGlow 1.6s infinite ease-in-out;
+}
+
+@keyframes anchorPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.6), 0 0 0 2px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.95), 0 0 0 4px rgba(255, 255, 255, 1);
+  }
+}
+
+.anchor-indicator {
+  animation: anchorPulse 1.4s infinite ease-in-out;
+}
